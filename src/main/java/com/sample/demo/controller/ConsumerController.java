@@ -5,7 +5,6 @@ import com.sample.demo.service.ConsumerSearchService;
 
 import com.sample.demo.model.Consumer;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,11 +13,8 @@ import java.util.List;
 @RequestMapping("/consumers")
 public class ConsumerController {
 	
-	@Autowired
-    private final ConsumerRegistrationService registrationService;
-	
-	@Autowired
-    private final ConsumerSearchService searchService;
+	private final ConsumerRegistrationService registrationService;
+	private final ConsumerSearchService searchService;
 
     public ConsumerController(ConsumerRegistrationService registrationService, ConsumerSearchService searchService) {
         this.registrationService = registrationService;

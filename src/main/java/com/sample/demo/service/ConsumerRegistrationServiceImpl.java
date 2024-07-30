@@ -6,12 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.sample.demo.model.Consumer;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 @Service
 public class ConsumerRegistrationServiceImpl implements ConsumerRegistrationService {
 	
-	@Autowired
 	private final ConsumerRepository consumerRepository;
 
     public ConsumerRegistrationServiceImpl(ConsumerRepository consumerRepository) {

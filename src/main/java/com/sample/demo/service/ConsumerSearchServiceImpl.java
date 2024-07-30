@@ -1,7 +1,5 @@
 package com.sample.demo.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.sample.demo.repository.ConsumerRepository;
 
 import org.springframework.stereotype.Service;
@@ -14,8 +12,7 @@ import java.util.Optional;
 @Service
 public class ConsumerSearchServiceImpl implements ConsumerSearchService {
 	
-	@Autowired
-    private final ConsumerRepository consumerRepository;
+	private final ConsumerRepository consumerRepository;
 
     public ConsumerSearchServiceImpl(ConsumerRepository consumerRepository) {
         this.consumerRepository = consumerRepository;
